@@ -1,6 +1,6 @@
-# Frontend Mentor - Social links profile
+# Frontend Mentor - Blog preview card
 
-![Design preview for the Social links profile coding challenge](./design/desktop-preview.jpg)
+![Design preview for the Blog preview card coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
 
@@ -12,11 +12,11 @@ Thanks for checking out this front-end coding challenge.
 
 ## The challenge
 
-Your challenge is to build out this social links profile and get it looking as close to the design as possible.
+Your challenge is to build out this blog preview card and get it looking as close to the design as possible.
 
 You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
 
-Your users should be able to: 
+Your users should be able to:
 
 - See hover and focus states for all interactive elements on the page
 
@@ -91,10 +91,3 @@ We love receiving feedback! We're always looking to improve our challenges and o
 This challenge is completely free. Please share it with anyone who will find it useful for practice.
 
 **Have fun building!** 🚀
-
-
-
-
-# I've just completed a front-end coding challenge from @frontendmentor! 🎉
-# You can see my solution here: https://www.frontendmentor.io/solutions/socil-links-profile-Dvfqpiv0iq
-# Any suggestions on how I can improve are welcome!
