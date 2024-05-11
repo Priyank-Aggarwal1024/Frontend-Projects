@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | FAQ accordion</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 16px;
+        width: 100%;
+      }
+      body {
+        width: 100%;
+        min-height: 100vh;
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      .desktop {
+        width: 100%;
+      }
+      .mobile {
+        display: none;
+      }
+      .main {
+        width: 100%;
+        min-height: 100vh;
+      }
+      .faq-heding {
+        display: flex;
+        gap: 1rem;
+        position: relative;
+      }
+      .faq-accordion {
+        background-color: white;
+        width: 90%;
+        max-width: 500px;
+        margin: 1rem;
+        padding: 1.2rem 2rem 1.2rem 1.2rem;
+        border-radius: 1rem;
+        -webkit-box-shadow: 0 0 10.5px 1.5px #8c6991;
+        -moz-box-shadow: 0 0 10.5px 1.5px #8c6991;
+        box-shadow: 0 0 10.5px 1.5px #8c6991;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(calc(-50% - 1rem), -50%);
+        /* transform: translateY(1%); */
+      }
+      .faq-ans {
+        height: 0;
+        display: none;
+        padding: 0.5rem;
+        color: hsl(292, 16%, 49%);
+        word-spacing: 5px;
+      }
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 800;
+      }
+      .faq {
+        margin: 0.5rem 0;
+        padding: 0.5rem 0;
+        position: relative;
+      }
+      .faq-ques {
+        position: relative;
+        font-weight: 700;
+        font-size: 1rem;
+        color: black;
+      }
+      .faq-ques:hover {
+        color: hsl(292, 85%, 33%);
+        /* color: aqua; */
+        cursor: pointer;
+        caret-color: black;
+      }
+
+      input {
+        height: 0;
+      }
+      input::after {
+        content: "";
+        position: absolute;
+        width: 1.5rem;
+        height: 1.5rem;
+        background-size: 100% 100%;
+        background-image: url("./assets/images/icon-plus.svg");
+        top: 1rem;
+        right: -1.5rem;
+        transform: translateX(-50%);
+        transform: translateY(-50%);
+      }
+      input:checked::after {
+        background-image: url("./assets/images/icon-minus.svg");
+        transition: all 1s;
+      }
+
+      input:checked + .faq-ans {
+        height: fit-content;
+        display: block;
+        transition: all 1s;
+      }
+      .star {
+        width: 36px;
+        height: 36px;
+        margin-top: 0.3rem;
+      }
+      @media (width<520px) {
+        .desktop {
+          display: none;
+        }
+        .mobile {
+          display: block;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="main">
+      <img
+        src="./assets/images/background-pattern-desktop.svg"
+        alt=""
+        class="desktop"
+      />
+      <img
+        src="./assets/images/background-pattern-mobile.svg"
+        alt=""
+        class="mobile"
+      />
+      <div class="faq-accordion">
+        <div class="faq-heding">
+          <img src="./assets/images/icon-star.svg" alt="" class="star" />
+          <h1>FAQs</h1>
+        </div>
+        <div class="faq-1 faq">
+          <label for="ques1" class="faq-ques">
+            What is Frontend Mentor, and how will it help me?
+          </label>
+          <input type="checkbox" name="ques1" id="ques1" />
+          <div class="faq-ans">
+            Frontend Mentor offers realistic coding challenges to help
+            developers improve their frontend coding skills with projects in
+            HTML, CSS, and JavaScript. It's suitable for all levels and ideal
+            for portfolio building.
+          </div>
+        </div>
+        <hr />
+        <div class="faq-2 faq">
+          <label for="ques2" class="faq-ques"> Is Frontend Mentor free?</label>
+          <input type="checkbox" name="ques2" id="ques2" />
+          <div class="faq-ans">
+            Yes, Frontend Mentor offers both free and premium coding challenges,
+            with the free option providing access to a range of projects
+            suitable for all skill levels.
+          </div>
+        </div>
+        <hr />
+        <div class="faq-3 faq">
+          <label for="ques3" class="faq-ques">
+            Can I use Frontend Mentor projects in my portfolio?
+          </label>
+          <input type="checkbox" name="ques3" id="ques3" />
+          <div class="faq-ans">
+            Yes, you can use projects completed on Frontend Mentor in your
+            portfolio. It's an excellent way to showcase your skills to
+            potential employers!
+          </div>
+        </div>
+        <hr />
+        <div class="faq-4 faq">
+          <label for="ques4" class="faq-ques">
+            How can I get help if I'm stuck on a Frontend Mentor challenge?
+          </label>
+
+          <input type="checkbox" name="ques4" id="ques4" />
+          <div class="faq-ans">
+            The best place to get help is inside Frontend Mentor's Discord
+            community. There's a help channel where you can ask questions and
+            seek support from other community members.
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+    </main>
+  </body>
+</html>
