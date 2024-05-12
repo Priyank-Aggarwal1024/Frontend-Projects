@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <script src="app.js" defer></script>
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 16px;
+      }
+      body {
+        min-height: 100vh;
+        width: 100%;
+      }
+      .main {
+        width: 100%;
+        min-height: 100vh;
+        background-color: hsl(234, 29%, 20%);
+        position: relative;
+      }
+      .newsletter {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 700px;
+        min-height: 510px;
+        background-color: white;
+        border-radius: 1rem;
+        padding: 1rem;
+        display: flex;
+      }
+      .newsletter-card {
+        padding: 2rem 1rem 0 1rem;
+        width: 100%;
+      }
+      .newsletter-card p {
+        margin: 0.9rem 0;
+      }
+
+      .newsletter-img {
+        background: url("./assets//images/illustration-sign-up-desktop.svg");
+        width: 100%;
+        background-size: 100% 100%;
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      .list {
+        display: flex;
+        gap: 1rem;
+      }
+      label {
+        display: block;
+        margin: 1.5rem 0 0 0;
+        font-weight: 600;
+      }
+      input,
+      button {
+        all: unset;
+        height: 3rem;
+        width: 100%;
+        padding: 0 1rem;
+        margin: 1rem 0 0 0;
+        box-sizing: border-box;
+      }
+      input {
+        border-radius: 0.5rem;
+        border: 1px solid black;
+      }
+      button {
+        background-color: hsl(234, 29%, 20%);
+        color: white;
+        text-align: center;
+        border-radius: 0.5rem;
+      }
+      @media (width<=780px) {
+        .newsletter {
+          min-width: 550px;
+          min-height: 430px;
+        }
+        .newsletter-card p {
+          margin: 0.4rem 0;
+        }
+        input,
+        button {
+          min-height: 2.4rem;
+          width: 100%;
+          padding: 0 1rem;
+          margin: 0.6rem 0 0 0;
+          box-sizing: border-box;
+        }
+        .newsletter-card {
+          padding: 1rem 0.5rem 0 0.5rem;
+          width: 100%;
+        }
+      }
+      @media (width<=578px) {
+        .newsletter {
+          min-width: 500px;
+          min-height: 370px;
+          padding: 0.5rem;
+        }
+        .newsletter-card p {
+          margin: 0.4rem 0;
+        }
+        input,
+        button {
+          min-height: 2.4rem;
+          width: 100%;
+          padding: 0 1rem;
+          margin: 0.6rem 0 0 0;
+          box-sizing: border-box;
+        }
+        .newsletter-card {
+          padding: 0.7rem 0.4rem 0 0.4rem;
+          width: 100%;
+        }
+      }
+
+      @media (width<=500px) {
+        .main {
+          background-color: white;
+        }
+        .newsletter {
+          all: unset;
+          display: grid;
+          grid-template-rows: 1fr auto;
+        }
+        .newsletter-card {
+          padding: 1.2rem;
+          grid-row-start: 2;
+          width: 100%;
+        }
+        .newsletter-img {
+          background: url("./assets/images/illustration-sign-up-mobile.svg");
+          height: 284px;
+          width: 100%;
+          background-size: 100% 100%;
+        }
+        .newsletter-card p {
+          margin: 0.8rem 0;
+        }
+        input,
+        button {
+          min-height: 2.4rem;
+          width: 100%;
+          padding: 0 1rem;
+          margin: 1rem 0 0 0;
+          box-sizing: border-box;
+        }
+      }
+      label {
+        display: flex;
+        justify-content: space-between;
+      }
+      .error {
+        display: none;
+        color: red;
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+      .display-error {
+        display: inline;
+      }
+      .input-error {
+        color: red;
+        border-color: red;
+        background-color: rgba(255, 0, 0, 0.137);
+      }
+
+      button:hover {
+        transition: all 100ms;
+        background: linear-gradient(90deg, orangered, rgb(250, 101, 126));
+        -webkit-box-shadow: 3px 3px 16.5px -1px orangered;
+        -moz-box-shadow: 3px 3px 16.5px -1px orangered;
+        box-shadow: 3px 3px 16.5px -1px orangered;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sign-up form start -->
+
+    <main class="main">
+      <div class="newsletter">
+        <div class="newsletter-card">
+          <h1 class="newsletter-heading">Stay updated!</h1>
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
+          <p class="list">
+            <img src="./assets/images/icon-list.svg" alt="" /><span
+              >Product discovery and building what matters</span
+            >
+          </p>
+          <p class="list">
+            <img src="./assets/images/icon-list.svg" alt="" /><span
+              >Measuring to ensure updates are a success</span
+            >
+          </p>
+          <p class="list">
+            <img src="./assets/images/icon-list.svg" alt="" /><span
+              >And much more!</span
+            >
+          </p>
+          <form action="#">
+            <label for="email"
+              ><span>Email address</span><span class="error">Hlo</span></label
+            >
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="email@company.com"
+              class="input"
+            />
+            <button>Subscribe to monthly newsletter</button>
+          </form>
+        </div>
+        <div class="newsletter-img"></div>
+      </div>
+    </main>
+
+    <!-- Sign-up form end -->
+
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  </body>
+</html>

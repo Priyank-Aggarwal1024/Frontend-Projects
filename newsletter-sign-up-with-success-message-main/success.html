@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .success {
+        width: 360px;
+        height: 360px;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 1.4rem;
+        background-color: white;
+      }
+      @media (width<=375px) {
+        .success {
+          width: 100%;
+          min-height: 100vh;
+          border-radius: 0;
+        }
+      }
+      .success div {
+        margin: 0.8rem 0;
+      }
+      div.success-icon {
+        margin: 0;
+      }
+
+      .success-button button {
+        all: unset;
+        display: block;
+        box-sizing: border-box;
+        border-radius: 0.3rem;
+        width: 100%;
+        padding: 0.6rem;
+        text-align: center;
+        background-color: hsl(234, 29%, 20%);
+        color: white;
+      }
+      body {
+        min-height: 100vh;
+        max-width: 100%;
+        background-color: hsl(235, 18%, 26%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      button:hover {
+        transition: all 100ms;
+        background: linear-gradient(90deg, orangered, rgb(250, 101, 126));
+        -webkit-box-shadow: 3px 3px 16.5px -1px orangered;
+        -moz-box-shadow: 3px 3px 16.5px -1px orangered;
+        box-shadow: 3px 3px 16.5px -1px orangered;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Success message start -->
+
+    <div class="success">
+      <div>
+        <div class="success-icon">
+          <img src="./assets/images/icon-success.svg" alt="" />
+        </div>
+        <div class="success-heading">
+          <h1>Thanks for subscribing!</h1>
+        </div>
+        <div class="success-about">
+          <p>
+            A confirmation email has been sent to <b>ash@loremcompany.com</b>.
+            Please open it and click the button inside to confirm your
+            subscription.
+          </p>
+        </div>
+      </div>
+      <div class="success-button">
+        <button>Dismiss message</button>
+      </div>
+    </div>
+
+    <!-- Success message end -->
+  </body>
+</html>
