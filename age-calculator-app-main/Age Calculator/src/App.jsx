@@ -145,4 +145,9 @@ function App() {
   )
 }
 
+// I've just completed a front-end coding challenge from @frontendmentor! 🎉
+
+// You can see my solution here: https://www.frontendmentor.io/solutions/age-calculator-app-4k4qx1JR6h
+
+// Any suggestions on how I can improve are welcome!
 export default App
