@@ -1,0 +1,309 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url("/assets/fonts/static/Inter-Regular.ttf");
+
+}
+
+@font-face {
+    font-family: mySecondFont;
+    src: url('./assets/fonts/static/Inter-ExtraBold.ttf');
+}
+
+html {
+    font-family: myFirstFont;
+    font-size: 15px;
+    position: relative;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100%;
+    padding-top: 2rem;
+    margin: 0rem 2rem;
+    padding-bottom: 4rem;
+}
+
+.main {
+    display: grid;
+    grid-template-rows: minmax(fit-content, 400px) 1fr;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+ul,
+li {
+    all: unset;
+    display: block;
+    padding: .4rem .8rem;
+    font-size: 1.2rem;
+}
+
+ul {
+    display: flex;
+    gap: 1.2rem;
+}
+
+input {
+    display: none;
+}
+
+.close,
+.open {
+    display: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.main-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+}
+
+.main-left {
+    display: grid;
+    grid-template-rows: minmax(200px, 1fr) min-content;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.left-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+}
+
+.left-bottom-heading {
+    font-family: mySecondFont;
+    font-size: 2.2rem;
+    font-weight: 900;
+}
+
+.left-bottom-about p {
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.left-bottom-about button {
+    all: unset;
+    min-width: 120px;
+    background-color: hsl(5, 85%, 63%);
+    padding: .5rem 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: white;
+}
+
+li:hover {
+    color: hsl(5, 85%, 63%);
+    transition: all 200ms;
+}
+
+button:hover {
+    background-color: hsl(240, 100%, 5%);
+    transition: all 200ms;
+}
+
+.main-right-card h4:hover {
+    color: hsl(35, 77%, 62%);
+    transition: all 200ms;
+
+}
+
+.card-about h4 {
+    font-family: mySecondFont;
+}
+
+.card-about h4:hover {
+    color: hsl(5, 85%, 63%);
+    transition: all 200ms;
+
+}
+
+.main-right {
+    background-color: hsl(240, 100%, 5%);
+    color: white;
+    padding: 1rem;
+}
+
+.main-right-heading {
+    color: hsl(35, 77%, 62%);
+    margin-bottom: 1rem;
+}
+
+.main-right-article {
+    height: calc(100% - 3.5rem);
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+}
+
+.main-right-article>div {
+    padding: 1rem 0;
+}
+
+.main-right-card>p {
+    margin-top: .5rem;
+    color: gray;
+    font-size: .9rem;
+}
+
+.special {
+    border-bottom: 2px solid gray;
+    border-top: 2px solid gray;
+}
+
+.left-img {
+    background: url('./assets/images/image-web-3-desktop.jpg');
+    background-size: 100% 100%;
+}
+
+.left-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+/* .main-right{
+    d:g
+} */
+
+.navbar {
+    width: 100%;
+}
+
+.main-bottom {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-rows: 1fr;
+    gap: 2rem;
+}
+
+.bottom-card {
+    height: 150px;
+}
+
+.main-bottom>div {
+    display: flex;
+    gap: 1rem;
+}
+
+.card-img01,
+.card-img02,
+.card-img03 {
+    min-width: 120px;
+    background-size: 100% 100%;
+    background-position: center center;
+    /* background-size: contain; */
+}
+
+.card-img01 {
+    background: url('./assets//images/image-retro-pcs.jpg');
+}
+
+.card-img02 {
+    background: url('./assets/images/image-top-laptops.jpg');
+}
+
+.card-img03 {
+    background: url('./assets/images/image-gaming-growth.jpg');
+}
+
+.bottom-card h2,
+.bottom-card p {
+    color: gray;
+    margin-bottom: 1rem;
+}
+
+.bottom-card h4 {
+    margin: 1rem 0;
+}
+
+.card-about h2 {
+    font-family: mySecondFont;
+    font-size: 2rem;
+}
+
+@media (width>1180px) {
+    body {
+        width: 1180px;
+        margin: 0 auto;
+    }
+}
+
+@media (width<680px) {
+    .main-top {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr min-content;
+    }
+
+    .left-bottom {
+        grid-template-rows: min-content min-content;
+        grid-template-columns: 1fr;
+    }
+
+    ul {
+        display: none;
+    }
+
+    .close,
+    .open {
+        display: block;
+    }
+
+    .close img {
+        float: right;
+        margin-bottom: 4rem;
+    }
+
+    #check:checked+ul {
+        /* display: flex;
+        position: absolute;
+        width: 100vw;
+        background-color: white;
+        z-index: 1000;
+        height: 100vh; */
+
+        display: flex;
+        box-sizing: border-box;
+        background-color: white;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 250px;
+        height: 100vh;
+        padding: 4rem;
+        position: fixed;
+    }
+
+    .left-img {
+        background: url('./assets/images/image-web-3-mobile.jpg');
+        background-size: 100% 100%;
+    }
+}
+
+@media (width<400px) {
+    body {
+        margin: 1rem;
+    }
+}
+
+@media (width<310px) {
+    .main-bottom>div {
+        flex-direction: column;
+    }
+}
